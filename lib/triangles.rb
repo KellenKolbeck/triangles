@@ -9,31 +9,31 @@ class Triangle
     if @a_side + @b_side > @c_side && @a_side + @c_side > @b_side && @b_side + @c_side > @a_side
       true
     else
-      "These measurements do not meet the requirements for a triangle"
+      false
     end
   end
 
   define_method(:equalateral?) do
     if @a_side == @b_side && @b_side == @c_side
-      "This is an equalateral triangle"
+      true
     else
-      "This is not an equalateral triangle"
+      false
     end
   end
 
   define_method(:isosceles?) do
     if @a_side == @b_side || @b_side == @c_side || @a_side == @c_side
-      "This is an isosceles triangle"
+      true
     else
-      "This is not an isosceles triangle"
+      false
     end
   end
 
   define_method(:scalene?) do
     if @a_side != @b_side && @b_side != @c_side
-      "This is a scalene triangle"
+      true
     else
-      "This is not a scalene triangle"
+      false
     end
   end
 end
