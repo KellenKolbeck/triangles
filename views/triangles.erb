@@ -1,15 +1,14 @@
 <h1>Your triangle is:</h1>
+<% if @triangle.equalateral?().eql?("This is an equalateral triangle") %>
+You have an equalateral triangle
 
-<% if @triangle.equalateral?() %>
-  <h3>You have an equalateral triangle!</h3>
+<% elsif @triangle.isosceles?().eql?("This is an isosceles triangle") %>
+You have an isosceles triangle
 
-<% elsif @triangle.isosceles?() %>
-  <h3>You have an isosceles triangle!</h3>
-
-<% elsif @triangle.scalene?() %>
-  <h3>You have an scalene triangle!</h3>
+<% elsif @triangle.scalene?().eql?("This is a scalene triangle") %>
+You have an scalene triangle
 
 <% else %>
-  <h3>Your sides do not make a triangle</h3>
+Your sides do not make a triangle
 
 <% end %>

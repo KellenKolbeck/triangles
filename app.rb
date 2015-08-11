@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/triangles')
+require('pry')
 
 get('/') do
   erb(:index)
@@ -12,5 +13,6 @@ get('/triangles') do
   @b_side=params.fetch('b_side')
   @c_side=params.fetch('c_side')
   @triangle=Triangle.new(@a_side, @b_side, @c_side)
+  @result = @triangle.isosceles?()
   erb(:triangles)
   end
