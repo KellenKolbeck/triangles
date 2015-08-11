@@ -7,8 +7,9 @@
 
 <% elsif @triangle.scalene?() %>
 <h3>You have an scalene triangle</h3>
+<% binding.pry %>
 
-<% else %>
+<% else @triangle.sides()%>
 <h3>Your sides do not make a triangle</h3>
 
 <% end %>
